@@ -1,0 +1,164 @@
+:root {
+    --color_primario: #000428;
+    --color_primario_suave: #000428;
+    --color_blanco: #fff;
+    --altura_header: 80px;
+    --padding_left_right: 2rem;
+    --ancho_maximo: 1200px;
+}
+
+body{
+    background-color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ol,ul{
+    list-style: none;
+}
+
+.header {
+    height: var(--altura_header);
+    background-color: var(--color_primario);
+}
+.navbar {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 var(--padding_left_right);
+    z-index: 1000;
+}
+.menu_hamburguesa{
+    display: none;
+}
+.menu_hamburguesa:checked + .ul_links {
+    height: calc(100vh - var(--altura_header));
+}
+.logo {
+    color: var(--color_blanco);
+}
+
+.list_icon {
+    color: var(--color_blanco);
+    cursor: pointer;
+}
+.ul_links {
+    width: 100%;
+    background-color: var(--color_primario_suave);
+    position: absolute;
+    top: var(--altura_header);
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    transition: all .3s;
+}
+
+.link {
+    font-size: 1em;
+    color: var(--color_blanco);
+    font-weight: bold;
+}
+
+@media (min-width:900px){
+    .labe_hamburguesa {
+        display: none;
+    }
+    .ul_links{
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        z-index: 2000;
+    }
+    .link{
+        font-size: 1.2rem;
+        transition: all .3s;
+        padding: .2rem .7rem;
+    }
+    .link:hover{
+        background-color: #113e92;
+    }
+}
+#demo_carousel{
+    width: 33%;
+    margin-top: 10px;
+   
+    position: relative;
+    z-index: 5;
+    float: left;
+}
+
+#demo_flex{
+    width: 33%;
+    margin-top: 10px;
+    align-content: center;
+}
+
+#demo_login{
+    display: flex;
+    background-color: #333;
+    width: 33%;
+    margin-top: 10px;
+}
+
+.section{
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.d-block{
+    width: 100%;
+}
+
+article{
+    background-color: black;
+}
+
+.flex-container{
+    background: var(--color_primario_suave);
+    display: flex;
+    flex-flow: column wrap;
+}
+.flexbox{
+    align-self: center;
+    padding: 20px;
+    margin-top: 5px;
+}
+
+form{
+    width: 96%;
+    margin: 10px;
+}
+.form-control{
+    margin: 20px 0px 20px 0px;
+    text-align: center;
+}
+#flexbox{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: column wrap;
+    margin: 40px 0px 20px 0px;
+    gap: 2rem;
+}
+
+#redes_sociales{
+    padding: 20px;
+    text-decoration: none;
+}
+
+footer{
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
