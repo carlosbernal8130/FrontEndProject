@@ -9,6 +9,6 @@ function consulta_certificado() {
     window.open(url,'_blank');
 };
 
-document.getElementById('puntos_pago').addEventListener("click", function() {
-    window.open('mapa.html', '_blank');
-});
+function puntos_de_pago() {
+    window.open("mapa.html", "_blank");
+};
