@@ -8,3 +8,7 @@ function consulta_certificado() {
     let url ="https://www.enlace-apb.com/interssi/descargarCertificacionPago.jsp"
     window.open(url,'_blank');
 };
+
+document.getElementById('puntos_pago').addEventListener("click", function() {
+    window.open('mapa.html', '_blank');
+});
