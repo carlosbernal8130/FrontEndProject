@@ -200,3 +200,8 @@ footer{
     padding: 0;
     text-align: justify;
 }
+
+#mi_mapa{
+    width: 60%; 
+    height: 400px;
+}

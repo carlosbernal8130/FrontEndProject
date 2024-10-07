@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puntos de pago</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
@@ -12,7 +13,7 @@
 
 </head>
 <body>
-    <div id="mi_mapa" style="width: 60%; height: 400px;" class="ui-widget-content"></div>
+    <div id="mi_mapa" class="ui-widget-content"></div>
     <script>
         let map = L.map('mi_mapa').setView([4.648768, -74.074877], 11);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
