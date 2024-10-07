@@ -178,13 +178,18 @@ footer{
     height: auto;   
 }
 
-#fechas_vencimiento{
-    width: 400px;
-    height: 600px;
-}
-
 #modal_body_fechas_vencimiento{
     padding: 0;
+}
+
+.custom-modal {
+    width: 600px;
+    height: 400px;
+}
+#img_calendario {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .card-header{
