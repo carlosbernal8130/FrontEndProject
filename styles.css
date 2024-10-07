@@ -178,6 +178,11 @@ footer{
     height: auto;   
 }
 
+#fechas_vencimiento{
+    width: 400px;
+    height: 600px;
+}
+
 #modal_body_fechas_vencimiento{
     padding: 0;
 }
