@@ -162,3 +162,31 @@ footer{
     background-color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+
+#img_harold{
+    width: 30%;
+    height: 30%;
+}
+
+#modal_body_testimonios{
+    text-align: justify;
+}
+
+#img_calendario{
+    width: 100%;
+    height: auto;   
+}
+
+#modal_body_fechas_vencimiento{
+    padding: 0;
+}
+
+.card-header{
+    text-align: center;
+}
+
+.collapse{
+    padding: 0;
+    text-align: justify;
+}

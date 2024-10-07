@@ -35,10 +35,10 @@
                     <a href="index.html" class="link">Inicio</a>
                 </li>
                 <li class="li_links">
-                    <a href="" class="link">Quienes somos?</a>
+                    <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#quienes_somos">Quienes somos?</a>
                 </li>
                 <li class="li_links">
-                    <a href="" class="link" target="_blank">Testimonios</a>
+                    <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#testimonios">Testimonios</a>
                 </li>
                 <li class="li_links">
                     <a href="mapa.html" class="link" target="_blank">Puntos de pago</a>
@@ -97,7 +97,7 @@
                 </button>
             </div>
             <div class="flexbox">
-                <button type="button" id="fecha_vencimiento" class="btn btn-outline-primary btn-lg">
+                <button type="button" id="fecha_vencimiento" data-bs-toggle="modal" data-bs-target="#fechas_vencimiento" class="btn btn-outline-primary btn-lg">
                     <img height="50" width="50" src="iconos/calendario.png">
                     <h5>Fechas de vencimiento</h5>
                 </button>
@@ -135,7 +135,7 @@
                             </svg>
                             <h6>Recupera tu clave</h6>
                         </button>
-                        <button type="button" class="btn btn-outline-primary">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#ayuda" class="btn btn-outline-primary">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
                                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247m2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
                             </svg>
@@ -146,14 +146,14 @@
             </form>
         </section>
     </article>
-    <!--Modal de quienes somoos, pendiente integrar a index-->
+    <!--Modal de quienes somos, muestra una ventana modal con texto-->
     <div class="modal" id="quienes_somos">
         <div class="modal-dialog">
           <div class="modal-content">
       
             <!-- Modal Header -->
             <div class="modal-header">
-              <h4 class="modal-title">Quienes somos?</h4>
+              <h4 class="modal-title"><b>Quienes somos?</b></h4>
               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
       
@@ -166,14 +166,155 @@
       
             <!-- Modal footer -->
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
             </div>
       
           </div>
         </div>
       </div>
-      <!--Footer de la página-->
-      <footer>
+    <!--Modal de testimonios, muestra una ventana modal con texto e imagen-->
+    <div class="modal" id="testimonios">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title"><b>Testimonios</b></h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body" id="modal_body_testimonios">
+                <center><img src="imagenes/harold.jpg" class="rounded-circle" id="img_harold"></center><br>
+                <p><i>
+                    Ha sido una gran experiencia poder usar la página de pagos pila, para la gestión de liquidación y pagos de nuestra empresa. 
+                    Además que posee una variedad de canales para el pago oportuno.
+                    </i><br><br>
+                    <b>Harold Green</b>
+                </p>
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--Modal de fechas de vencimiento, muestra una ventana modal con imagen que ocupa todo el modal-->
+    <div class="modal" id="fechas_vencimiento">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal body -->
+            <div class="modal-body" id="modal_body_fechas_vencimiento">
+                <img src="imagenes/calendario.jpg" id="img_calendario">
+            </div>     
+          </div>
+        </div>
+    </div>
+    <!--Modal de ayuda, muestra una ventana modal con acordeon-->
+    <div class="modal" id="ayuda">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title"><b>Ayuda</b></h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body" id="modal_body_ayuda">
+                <div id="accordion">
+
+                    <div class="card">
+                      <div class="card-header">
+                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseOne">
+                          <b>Ingreso Seguro</b>
+                        </a>
+                      </div>
+                      <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <p><b>Confirma tu usuario:</b> Asegúrate de ingresar tu nombre de usuario exactamente 
+                                    como lo registraste, prestando atención a las mayúsculas y caracteres especiales.
+                                    </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p><b>Recupera tu clave:</b> Para ver los caracteres de tu contraseña, utiliza el ícono de ojo a la derecha. 
+                                        Intenta evitar que terceros vean tu pantalla mientras lo haces.
+                                    </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p><b>Mayúsculas:</b> Verifica que la tecla de mayúsculas no esté activada accidentalmente.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p><b>Requisitos de la contraseña:</b> Tu contraseña debe tener al menos un número, una letra en mayúscula, 
+                                        una letra en minúscula y un símbolo como: _-!¡@#$%&.* .
+                                        Además, debe tener entre 10 y 18 caracteres de longitud.
+                                    </p>
+                                </li>
+                            </ul> 
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="card">
+                      <div class="card-header">
+                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+                          <b>Recupera tu clave</b>
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                        <div class="card-body">
+                          <p>Si olvidaste tu contraseña, estamos aquí para ayudarte a recuperar el acceso a tu cuenta. 
+                            Sigue estos sencillos pasos:</p>
+                            <ol class="list-group list-group-numbered">
+                                <li class="list-group-item">
+                                    Haz clic en: <button class="btn btn-primary btn-sm" >Recupera tu clave</button>
+                                </li>
+                                <li class="list-group-item">
+                                    Ingresa tu nombre de usuario.
+                                </li>
+                                <li class="list-group-item">
+                                    Enviaremos un enlace de restablecimiento a tu dirección de correo electrónico registrado.
+                                </li>
+                                <li class="list-group-item">
+                                    Haz clic en el enlace y sigue las instrucciones para crear una nueva contraseña segura.
+                                </li>
+                            </ol>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="card">
+                      <div class="card-header">
+                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+                          <b>Canales de contacto</b>
+                        </a>
+                      </div>
+                      <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                        <div class="card-body">
+                          <p>En Asopagos, queremos asegurarnos de que te sientas respaldado en cada paso del camino. Nuestros canales de contacto para que obtengas la asistencia que necesitas 
+                          <button class="btn btn-primary btn-sm">aquí</button>  
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  
+                  </div>
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<!--Footer de la página-->
+<footer>
         <center><div id="redes_sociales">        
             <a href="https://web.facebook.com/p/Asopagos-SA-100057364483643/?locale=es_LA&_rdc=1&_rdr" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
